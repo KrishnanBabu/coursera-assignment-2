@@ -1,0 +1,26 @@
+<html>
+<head>
+	<style type="text/css">
+		.list-container {
+			float: left;
+			width: 42%;
+			margin: 2%
+		}
+	</style>
+	<script src="angular.min.js"></script>
+</head>
+<body ng-app="ShoppingListCheckOff">
+  <h1>assignment2</h1>
+<div class="list-container" ng-controller="ToBuyController">
+	<h2>To Buy Products</h2>
+	<ul ng-if="items.length > 0">
+		<li ng-repeat="item in items">
+			<h4>Name: {{item.name}}</h4>
+			<span>Quantity: {{item.quantity}}</span>
+			<button ng-click="buyProduct(item)"> To Buy</button>
+		</li>
+	</ul>
+	<p ng-if="items.length === 0" >Everything is bought !</p>
+</div>
+</body>
+</html>
