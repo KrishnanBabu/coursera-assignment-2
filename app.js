@@ -21,7 +21,7 @@
   	}, {
   		name: "Charger",
   		quantity: 2
-  	}];a
+  	}];
 
   	this.boughtItems = [];
 

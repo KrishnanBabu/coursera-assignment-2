@@ -8,6 +8,7 @@
 		}
 	</style>
 	<script src="angular.min.js"></script>
+	<script src="app.js"></script>
 </head>
 <body ng-app="ShoppingListCheckOff">
   <h1>assignment2</h1>
@@ -15,12 +16,22 @@
 	<h2>To Buy Products</h2>
 	<ul ng-if="items.length > 0">
 		<li ng-repeat="item in items">
-			<h4>Name: {{item.name}}</h4>
-			<span>Quantity: {{item.quantity}}</span>
+
+			<span>Buy {{item.quantity}} {{item.name}} </span>
 			<button ng-click="buyProduct(item)"> To Buy</button>
 		</li>
 	</ul>
 	<p ng-if="items.length === 0" >Everything is bought !</p>
+</div>
+<div class="list-container" ng-controller='AlreadyBoughtController'>
+	<h2>Already Bought Products</h2>
+	<ul ng-if="items.length > 0">
+		<li ng-repeat="item in items">
+
+			<span>Bought {{item.quantity}} {{item.name}}</span>
+		</li>
+	</ul>
+	<p ng-if="items.length === 0">Nothing bought yet !</p>
 </div>
 </body>
 </html>
